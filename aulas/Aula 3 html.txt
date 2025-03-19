@@ -1,0 +1,54 @@
+Aula 3 HTML
+
+w3school: https://www.w3schools.com/html/html_favicon.asp
+
+Flaicon: https://www.flaticon.com/br/icones-gratis/ico
+
+favicon: Icone que aparece na guia
+(dentro do head)
+ex: <link rel="icon" type="image/(tipo; Jpeg, png...)" href="(localdoicone)">
+
+Suporte para favicon: Safari, Opera, Firefox, Chrome, Edge. todos possuem suporte ao favicon
+
+-----------------------------------------------------------------------------------
+
+w3school: https://www.w3schools.com/html/html_tables.asp
+
+tabelas: organizar informações (utilizado para organizar imagens, posicionar//)
+
+Utilização:
+<table>
+	<tr>
+		<th>(Coluna 1)</th> (parte de cima)
+		<th>(Colula 2)</th> (parte de cima)
+	</tr>
+	<tr>
+		<td>(linha 1)</td> (parte inferior 1)
+		<td>(linha 1)</td> (parte inferior 1)
+	</tr>
+	<tr>
+		<td>(linha 2)</td> (parte inferior 2)
+		<td>(linha 2)</td> (parte inferior 2)
+	</tr>
+</table>
+
+as tabelas podem ser modificadas com css igualmente outros elementos, como 
+-borders; -backgroundcolor; -styles; -
+
+border-style: dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden.
+-----------------------------------------------------------------------------------
+
+HTML CSS
+css - para estilizar páginas (nota do aluno 18/3/2025; meio óbvio, lol.)
+
+CSS - Cascading Style Sheets
+
+CSS inline  - style dentro dos elementos unitarios do html
+CSS interno - <style> dentro do <head> com todas modificações
+CSS externo - <link> para linkar um arquivo de CSS ao html
+|
+L-> <link rel="stylesheet" href="(nome do arquivo).css">
+
+css embutido = inline
+
+
