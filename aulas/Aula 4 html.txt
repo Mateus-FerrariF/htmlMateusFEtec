@@ -1,0 +1,151 @@
+w3school link: https://www.w3schools.com/html/html_table_padding_spacing.asp
+
+
+
+Padding/Spacing:
+
+(padding: #px;),(top, left, right, bottom)
+
+
+Spacing: Cell spacing is the space between each cell.
+
+border-spacing: #px;
+
+
+-----------------------------------------------------------------------------------
+
+Colspan e Rolspan
+
+w3school link: https://www.w3schools.com/html/html_table_colspan_rowspan.asp
+
+
+
+-----------------------------------------------------------------------------------
+Table Styling
+
+w3school link: https://www.w3schools.com/html/html_table_styling.asp
+
+To style every other table row element, use the :nth-child(even) selector like this:
+
+
+-----------------------------------------------------------------------------------
+Colgroup
+
+w3school link: https://www.w3schools.com/html/html_table_colgroup.asp
+
+<colgroup>
+<col>
+
+-----------------------------------------------------------------------------------
+
+Listas:
+
+w3school link: https://www.w3schools.com/html/html_lists.asp
+
+Unordered list:
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul> 
+
+Ordered list:
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+</ol> 
+
+-----------------------------------------------------------------------------------
+
+Bloco Html
+
+w3school link: https://www.w3schools.com/html/html_blocks.asp
+
+Inline: 
+<span></span> - continua na mesma linha e suporta style em uma palavra especifica/texto
+
+<div></div> - container para outros elementos (pega a linha inteira em que está)
+pode ser alterado o tamanho por propriedades como width, pode ser centralizado com margin
+
+Pode ser alinhado em cadeia utilizando float (CSS)
+-- Pode ser adicionado em: <div class="variavel">
+div.variavel div {
+	float: left;
+}
+
+Pode ser alinhado com inline-block (CSS)
+display: inline-block;
+
+Há outras maneiras.
+-----------------------------------------------------------------------------------
+
+Classes:
+
+w3school link: https://www.w3schools.com/html/html_classes.asp
+
+Classe serve para estilizar todos elementos de uma mesma classe da mesma maneira, podendo variar
+sua notação é:
+
+↓- Isso é um ponto(junto ao nome)
+.*nome da variavel* {
+	---
+}
+pode haver mais de uma classe pros elementos
+podendo ser class="*Variavel1* *variavel 2*"
+
+Elementos diferentes podem compartilhar a mesma variavel e receber a mesma formatação, tal qual <p> e <h1>
+
+-----------------------------------------------------------------------------------
+
+ID:
+
+w3school link: https://www.w3schools.com/html/html_id.asp
+
+dentro do elemento:
+id="*nome*"
+
+CSS:
+#*nome* {
+	---
+}
+
+Id serve como bookmark
+
+ex:
+	<p><a href="#C4">Jump to Chapter 4</a></p>
+
+
+	<h2>Chapter 2</h2>
+	<p>This chapter explains ba bla bla</p>
+
+	<h2>Chapter 3</h2>
+	<p>This chapter explains ba bla bla</p>
+
+	<h2 id="C4">Chapter 4</h2>
+	<p>This chapter explains ba bla bla</p>
+
+
+(pula direto para o elemento com id de C4)
+
+Serve igualmente as classes mas o ID só serve pra um elemento, ou seja, apenas <p> ou apenas outro elemento
+
+-----------------------------------------------------------------------------------
+
+Iframes:
+
+w3school link: https://www.w3schools.com/html/html_iframe.asp
+
+An HTML iframe is used to display a web page within a web page.
+
+notação de uso:
+
+<iframe src="url" title="description"></iframe>
+
+Pode ter o tamanho ajustado por CSS ou dentro do proprio elemento com style
+EX:
+<iframe src="demo_iframe.htm" height="200" width="300" title="Iframe Example"></iframe>
+
+Pode alterar e remover as bordas
+
+
+
+ 
