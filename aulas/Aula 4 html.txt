@@ -146,6 +146,22 @@ EX:
 
 Pode alterar e remover as bordas
 
+-----------------------------------------------------------------------------------
 
+Layout
 
+w3school link: https://www.w3schools.com/html/html_layout.asp
+
+float para escolher o lado 
+
+-----------------------------------------------------------------------------------
+
+HTML responsivo
+
+w3school link: https://www.w3schools.com/html/html_responsive.asp
+
+- ajusta o site inteiro para ampliar automaticamente com todos os dispositivos
+- propriedade CSS
+
+<meta name="viewport" content="width=device-width", initial-scale=1.0">
  

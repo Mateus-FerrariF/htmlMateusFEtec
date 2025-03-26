@@ -1,0 +1,25 @@
+
+.cima1 {
+    background-color: aqua;
+}
+
+nav ul {
+    list-style-type: none;
+    width: 70%;
+    height: 100px;
+    margin-top: 0;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    padding-top: 35px;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+
+}
