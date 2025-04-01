@@ -1,4 +1,3 @@
-
 .cima1 {
     background-color: aqua;
 }
@@ -17,9 +16,112 @@ nav ul li {
 }
 
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 header {
 
+}
+
+.servicos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+#menu-principal {
+    background-color: #004e03;
+    padding: 10px;
+}
+
+#menu-principal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#menu-principal ul li {
+    display: inline;
+}
+
+#menu-principal ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+}
+#menu-principal ul li a:hover {
+    color: rgb(255, 225, 91);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#header-principal {
+    text-align: center;
+    background-color: #008037;
+    color: white;
+    padding: 20px 0;
+}
+
+#conteudo-principal {
+    padding: 20px;
+}
+
+#conteudo-principal h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+#descricao-servicos {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+#iframe-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#iframe-container iframe {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#lista-beneficios ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+#lista-beneficios ul li {
+    margin: 5px 0;
 }
