@@ -1,0 +1,43 @@
+w3school: https://www.w3schools.com/html/html5_semantic_elements.asp
+
+Semantic Elements:
+são os elementos para nos organizarmos por exemplo
+<article> 
+<header>
+<main>
+<footer>
+<aside>
+
+Elas são pré definidas já
+
+-----------------------------------------------------------------------------------
+w3school: https://www.w3schools.com/html/html5_syntax.asp
+
+Estilo:
+Utilizar apenas nomes com letras minusculas poi são mais faceis de digitar e
+aparentam maior limpeza na escrita
+
+tags sempre em minuscula
+sempre feche a tag
+sempre defina alt para imagem e altura+comprimento
+sempre adicionar lang no <html>
+Sempre adicionar charset e viewport
+
+-----------------------------------------------------------------------------------
+w3school: https://www.w3schools.com/html/html_charset.asp
+
+Charset
+no brazil utiliza UTF-8; <meta charset="UTF-8">
+
+-----------------------------------------------------------------------------------
+w3school: https://www.w3schools.com/html/html_forms.asp
+
+Formularios
+<form>
+	<label for="nome">Nome:</label><br>
+	<input type="text" id="nome" name="nome"><br>
+</form>
+
+tipos de input: https://www.w3schools.com/html/html_form_input_types.asp
+
+
