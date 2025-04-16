@@ -12,7 +12,10 @@ body {
     border: 1px solid #ccc;
     padding: 15px;
     margin-bottom: 20px;
-    border-top: 40px solid #bbcaeb;
+    border-top: 40px solid #d1d1d1;
+  }
+  .topo {
+    color: #004d40;
   }
   .campo-grupo {
     display: flex;
