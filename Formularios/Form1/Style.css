@@ -1,42 +1,103 @@
 body {
-    font-family: Arial, sans-serif;
-  }
-  h2 {
-    color: #004d40;
-  }
-  .container {
-    width: 80%;
-    margin: auto;
-  }
-  .section {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-top: 40px solid #d1d1d1;
-  }
-  .topo {
-    color: #004d40;
-  }
-  .campo-grupo {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  .campo {
-    flex: 1;
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
-  }
-  label {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-  input, select {
-    padding: 6px;
-    font-size: 14px;
-  }
-  .half {
-    flex: 0.48;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #2d572c;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #333;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.campo, .MeioCampo {
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label, .MeioCampo label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.campo input, .MeioCampo input, .MeioCampo select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.campo input[type="text"]:focus, 
+.MeioCampo input[type="text"]:focus, 
+.MeioCampo select:focus {
+  border-color: #2d572c;
+  outline: none;
+}
+
+.campo small {
+  font-size: 0.8rem;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #2d572c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #244a22;
+}
+
+.info {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: -10px;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #2d572c;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
