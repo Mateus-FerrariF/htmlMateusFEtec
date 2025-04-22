@@ -1,158 +1,179 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Escola Virtual - Pré-Matrícula</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 30px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 28px;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-
-    fieldset {
-      border: 1px solid #666;
-      padding: 15px;
-      margin-bottom: 20px;
-    }
-
-    legend {
-      font-weight: bold;
-    }
-
-    label {
-      display: inline-block;
-      width: 120px;
-      margin-bottom: 8px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    select {
-      width: 200px;
-      padding: 4px;
-      margin-bottom: 10px;
-    }
-
-    .linha {
-      margin-bottom: 10px;
-    }
-
-    .telefone input {
-      width: 50px;
-      margin-right: 5px;
-    }
-
-    .turno,
-    .atividades {
-      margin-top: 10px;
-    }
-
-    .atividades label {
-      display: block;
-      margin-left: 10px;
-    }
-
-    .botoes {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .botoes input {
-      padding: 6px 12px;
-      margin: 0 10px;
-      cursor: pointer;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Escola Virtual - Formulário de Pré-Matrícula</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css"/>
 </head>
-<body>
+<body class="bg-white text-black font-serif">
+  <div class="max-w-3xl mx-auto mt-8 border border-black p-4">
+    <h1 class="text-center font-bold text-2xl mb-1">Escola Virtual</h1>
+    <h2 class="text-center font-semibold text-lg mb-2">Formulário de Pré-Matrícula</h2>
+    <hr class="border-black mb-4" />
+    <form>
+      <fieldset class="border border-black p-3 mb-4">
+        <legend class="font-bold text-sm px-2">Dados Pessoais:</legend>
+        <div class="grid grid-cols-[10rem_auto] gap-x-2 gap-y-2 items-center text-sm">
+          <label for="nomeAluno" class="text-right">Nome do Aluno:</label>
+          <input
+            type="text"
+            id="nomeAluno"
+            name="nomeAluno"
+            class="border border-black h-6"
+            style="width: 250px"
+          />
+          <label for="nascimento" class="text-right">Nascimento (dd/mm/aaaa):</label>
+          <div class="flex items-center space-x-1">
+            <input
+              type="text"
+              id="nascDia"
+              name="nascDia"
+              maxlength="2"
+              class="border border-black h-6 w-10 text-center"
+            />
+            <span>/</span>
+            <input
+              type="text"
+              id="nascMes"
+              name="nascMes"
+              maxlength="2"
+              class="border border-black h-6 w-10 text-center"
+            />
+            <span>/</span>
+            <input
+              type="text"
+              id="nascAno"
+              name="nascAno"
+              maxlength="4"
+              class="border border-black h-6 w-16 text-center"
+            />
+          </div>
+          <label for="nomeMae" class="text-right">Nome da Mãe:</label>
+          <input
+            type="text"
+            id="nomeMae"
+            name="nomeMae"
+            class="border border-black h-6"
+            style="width: 250px"
+          />
+          <label for="nomePai" class="text-right">Nome do Pai:</label>
+          <input
+            type="text"
+            id="nomePai"
+            name="nomePai"
+            class="border border-black h-6"
+            style="width: 250px"
+          />
+          <label class="text-right">Telefone:</label>
+          <div class="flex items-center space-x-1">
+            <span>DDD</span>
+            <input
+              type="text"
+              id="ddd"
+              name="ddd"
+              maxlength="3"
+              class="border border-black h-6 w-12 text-center"
+            />
+            <span>Tel:</span>
+            <input
+              type="text"
+              id="telefone"
+              name="telefone"
+              maxlength="8"
+              class="border border-black h-6 w-24 text-center"
+            />
+            <span>Ramal:</span>
+            <input
+              type="text"
+              id="ramal"
+              name="ramal"
+              maxlength="4"
+              class="border border-black h-6 w-14 text-center"
+            />
+          </div>
+          <label for="email" class="text-right">E-Mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="border border-black h-6"
+            style="width: 250px"
+          />
+        </div>
+      </fieldset>
 
-  <h1>Escola Virtual</h1>
-  <h2>Formulário de Pré-Matrícula</h2>
+      <fieldset class="border border-black p-3 mb-4">
+        <legend class="font-bold text-sm px-2">Informações de Matrícula:</legend>
+        <div class="grid grid-cols-[10rem_auto_auto] gap-x-4 gap-y-2 text-sm">
+          <label for="serie" class="text-right">Série:</label>
+          <select
+            id="serie"
+            name="serie"
+            class="border border-black h-6 w-40"
+          >
+            <option>pré-escolar</option>
+          </select>
+          <div></div>
 
-  <form>
-    <fieldset>
-      <legend>Dados Pessoais:</legend>
-      
-      <div class="linha">
-        <label for="nomeAluno">Nome do Aluno:</label>
-        <input type="text" id="nomeAluno" name="nomeAluno">
+          <label class="text-right">Turno:</label>
+          <div class="flex flex-col space-y-1">
+            <label class="inline-flex items-center">
+              <input type="radio" name="turno" value="manha" class="mr-1" />
+              Manhã
+            </label>
+            <label class="inline-flex items-center">
+              <input type="radio" name="turno" value="tarde" class="mr-1" />
+              Tarde
+            </label>
+          </div>
+          <div></div>
+
+          <label class="text-right">Atividades Extracurriculares:</label>
+          <div class="flex flex-col space-y-1">
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="atividades" value="informatica" class="mr-1" />
+              Informática
+            </label>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="atividades" value="musica" class="mr-1" />
+              Música
+            </label>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="atividades" value="balet" class="mr-1" />
+              Balet
+            </label>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="atividades" value="pintura" class="mr-1" />
+              Pintura
+            </label>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="atividades" value="judo" class="mr-1" />
+              Judô
+            </label>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="atividades" value="futebol" class="mr-1" />
+              Futebol
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="flex justify-center space-x-4">
+        <button
+          type="submit"
+          class="border border-black rounded px-3 py-1 text-sm bg-white hover:bg-gray-100"
+        >
+          Envia Formulário
+        </button>
+        <button
+          type="reset"
+          class="border border-black rounded px-3 py-1 text-sm bg-white hover:bg-gray-100"
+        >
+          Limpa Campos
+        </button>
       </div>
-
-      <div class="linha">
-        <label>Nascimento (dd/mm/aaaa):</label>
-        <input type="text" size="2" maxlength="2"> /
-        <input type="text" size="2" maxlength="2"> /
-        <input type="text" size="4" maxlength="4">
-      </div>
-
-      <div class="linha">
-        <label for="mae">Nome da Mãe:</label>
-        <input type="text" id="mae" name="mae">
-      </div>
-
-      <div class="linha">
-        <label for="pai">Nome do Pai:</label>
-        <input type="text" id="pai" name="pai">
-      </div>
-
-      <div class="linha telefone">
-        <label>Telefone:</label>
-        DDD (<input type="text" size="2" maxlength="2">)
-        Tel: <input type="text" size="8" maxlength="9">
-        Ramal: <input type="text" size="4">
-      </div>
-
-      <div class="linha">
-        <label for="email">E-Mail:</label>
-        <input type="email" id="email" name="email">
-      </div>
-    </fieldset>
-
-    <fieldset>
-      <legend>Informações de Matrícula:</legend>
-
-      <div class="linha">
-        <label for="serie">Série:</label>
-        <select id="serie" name="serie">
-          <option value="pre">pré-escolar</option>
-          <option value="1ano">1º Ano</option>
-          <option value="2ano">2º Ano</option>
-        </select>
-      </div>
-
-      <div class="linha turno">
-        <label>Turno:</label>
-        <input type="radio" name="turno" value="manha"> Manhã
-        <input type="radio" name="turno" value="tarde"> Tarde
-      </div>
-
-      <div class="linha atividades">
-        <label>Atividades Extracurriculares:</label>
-        <label><input type="checkbox" name="atividades" value="informatica"> Informática</label>
-        <label><input type="checkbox" name="atividades" value="musica"> Música</label>
-        <label><input type="checkbox" name="atividades" value="balet"> Balet</label>
-        <label><input type="checkbox" name="atividades" value="pintura"> Pintura</label>
-        <label><input type="checkbox" name="atividades" value="judo"> Judô</label>
-        <label><input type="checkbox" name="atividades" value="futebol"> Futebol</label>
-      </div>
-    </fieldset>
-
-    <div class="botoes">
-      <input type="submit" value="Envia Formulário">
-      <input type="reset" value="Limpa Campos">
-    </div>
-  </form>
-
+    </form>
+  </div>
 </body>
 </html>
