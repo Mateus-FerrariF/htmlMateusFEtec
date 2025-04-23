@@ -1,178 +1,155 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Escola Virtual - Formulário de Pré-Matrícula</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./style.css"/>
+  <link rel="stylesheet" href="./style.css" type="text/css">
 </head>
-<body class="bg-white text-black font-serif">
-  <div class="max-w-3xl mx-auto mt-8 border border-black p-4">
-    <h1 class="text-center font-bold text-2xl mb-1">Escola Virtual</h1>
-    <h2 class="text-center font-semibold text-lg mb-2">Formulário de Pré-Matrícula</h2>
-    <hr class="border-black mb-4" />
+<body>
+  <div class="container" role="main" aria-label="Formulário de Pré-Matrícula da Escola Virtual">
+    <h1>Escola Virtual</h1>
+    <h2>Formulário de Pré-Matrícula</h2>
+    <hr />
     <form>
-      <fieldset class="border border-black p-3 mb-4">
-        <legend class="font-bold text-sm px-2">Dados Pessoais:</legend>
-        <div class="grid grid-cols-[10rem_auto] gap-x-2 gap-y-2 items-center text-sm">
-          <label for="nomeAluno" class="text-right">Nome do Aluno:</label>
+      <fieldset>
+        <legend>Dados Pessoais:</legend>
+        <div class="form-row">
+          <label for="nomeAluno" class="inline-label">Nome do Aluno:</label>
+          <input type="text" id="nomeAluno" name="nomeAluno" class="large-input" />
+        </div>
+        <div class="form-row">
+          <label class="inline-label" for="nascimentoDia">Nascimento (dd/mm/aaaa):</label>
           <input
             type="text"
-            id="nomeAluno"
-            name="nomeAluno"
-            class="border border-black h-6"
-            style="width: 250px"
+            id="nascimentoDia"
+            name="nascimentoDia"
+            maxlength="2"
+            class="small-input"
+            aria-label="Dia do nascimento"
           />
-          <label for="nascimento" class="text-right">Nascimento (dd/mm/aaaa):</label>
-          <div class="flex items-center space-x-1">
-            <input
-              type="text"
-              id="nascDia"
-              name="nascDia"
-              maxlength="2"
-              class="border border-black h-6 w-10 text-center"
-            />
-            <span>/</span>
-            <input
-              type="text"
-              id="nascMes"
-              name="nascMes"
-              maxlength="2"
-              class="border border-black h-6 w-10 text-center"
-            />
-            <span>/</span>
-            <input
-              type="text"
-              id="nascAno"
-              name="nascAno"
-              maxlength="4"
-              class="border border-black h-6 w-16 text-center"
-            />
-          </div>
-          <label for="nomeMae" class="text-right">Nome da Mãe:</label>
+          <span>/</span>
           <input
             type="text"
-            id="nomeMae"
-            name="nomeMae"
-            class="border border-black h-6"
-            style="width: 250px"
+            id="nascimentoMes"
+            name="nascimentoMes"
+            maxlength="2"
+            class="small-input"
+            aria-label="Mês do nascimento"
           />
-          <label for="nomePai" class="text-right">Nome do Pai:</label>
+          <span>/</span>
           <input
             type="text"
-            id="nomePai"
-            name="nomePai"
-            class="border border-black h-6"
-            style="width: 250px"
+            id="nascimentoAno"
+            name="nascimentoAno"
+            maxlength="4"
+            class="medium-input"
+            aria-label="Ano do nascimento"
           />
-          <label class="text-right">Telefone:</label>
-          <div class="flex items-center space-x-1">
-            <span>DDD</span>
-            <input
-              type="text"
-              id="ddd"
-              name="ddd"
-              maxlength="3"
-              class="border border-black h-6 w-12 text-center"
-            />
-            <span>Tel:</span>
-            <input
-              type="text"
-              id="telefone"
-              name="telefone"
-              maxlength="8"
-              class="border border-black h-6 w-24 text-center"
-            />
-            <span>Ramal:</span>
-            <input
-              type="text"
-              id="ramal"
-              name="ramal"
-              maxlength="4"
-              class="border border-black h-6 w-14 text-center"
-            />
-          </div>
-          <label for="email" class="text-right">E-Mail:</label>
+        </div>
+        <div class="form-row">
+          <label for="nomeMae" class="inline-label">Nome da Mãe:</label>
+          <input type="text" id="nomeMae" name="nomeMae" class="large-input" />
+        </div>
+        <div class="form-row">
+          <label for="nomePai" class="inline-label">Nome do Pai:</label>
+          <input type="text" id="nomePai" name="nomePai" class="large-input" />
+        </div>
+        <div class="form-row">
+          <label class="inline-label" for="telefoneDDD">Telefone:</label>
+          <span>DDD</span>
           <input
-            type="email"
-            id="email"
-            name="email"
-            class="border border-black h-6"
-            style="width: 250px"
+            type="text"
+            id="telefoneDDD"
+            name="telefoneDDD"
+            maxlength="2"
+            class="small-input"
+            aria-label="DDD do telefone"
           />
+          <span>Tel:</span>
+          <input
+            type="text"
+            id="telefoneTel"
+            name="telefoneTel"
+            maxlength="8"
+            class="medium-input"
+            aria-label="Número do telefone"
+          />
+          <span>Ramal:</span>
+          <input
+            type="text"
+            id="telefoneRamal"
+            name="telefoneRamal"
+            maxlength="4"
+            class="small-input"
+            aria-label="Ramal do telefone"
+          />
+        </div>
+        <div class="form-row">
+          <label for="email" class="inline-label">E-Mail:</label>
+          <input type="text" id="email" name="email" class="large-input" />
         </div>
       </fieldset>
 
-      <fieldset class="border border-black p-3 mb-4">
-        <legend class="font-bold text-sm px-2">Informações de Matrícula:</legend>
-        <div class="grid grid-cols-[10rem_auto_auto] gap-x-4 gap-y-2 text-sm">
-          <label for="serie" class="text-right">Série:</label>
-          <select
-            id="serie"
-            name="serie"
-            class="border border-black h-6 w-40"
-          >
-            <option>pré-escolar</option>
-          </select>
-          <div></div>
 
-          <label class="text-right">Turno:</label>
-          <div class="flex flex-col space-y-1">
-            <label class="inline-flex items-center">
-              <input type="radio" name="turno" value="manha" class="mr-1" />
-              Manhã
-            </label>
-            <label class="inline-flex items-center">
-              <input type="radio" name="turno" value="tarde" class="mr-1" />
-              Tarde
-            </label>
-          </div>
-          <div></div>
-
-          <label class="text-right">Atividades Extracurriculares:</label>
-          <div class="flex flex-col space-y-1">
-            <label class="inline-flex items-center">
-              <input type="checkbox" name="atividades" value="informatica" class="mr-1" />
-              Informática
-            </label>
-            <label class="inline-flex items-center">
-              <input type="checkbox" name="atividades" value="musica" class="mr-1" />
-              Música
-            </label>
-            <label class="inline-flex items-center">
-              <input type="checkbox" name="atividades" value="balet" class="mr-1" />
-              Balet
-            </label>
-            <label class="inline-flex items-center">
-              <input type="checkbox" name="atividades" value="pintura" class="mr-1" />
-              Pintura
-            </label>
-            <label class="inline-flex items-center">
-              <input type="checkbox" name="atividades" value="judo" class="mr-1" />
-              Judô
-            </label>
-            <label class="inline-flex items-center">
-              <input type="checkbox" name="atividades" value="futebol" class="mr-1" />
-              Futebol
-            </label>
-          </div>
+<fieldset>
+  <legend>Informações de Matrícula:</legend>
+    <div class="linha-formulario">
+        <label for="serie" class="rotulo">Série:</label>
+        <select id="serie" name="serie" class="entrada-media">
+            <option value="pre-escolar" selected>pré-escolar</option>
+            <option value="1ano">1º ano</option>
+            <option value="2ano">2º ano</option>
+            <option value="3ano">3º ano</option>
+            <option value="4ano">4º ano</option>
+            <option value="5ano">5º ano</option>
+        </select>
+    </div>
+    <div class="linha-formulario">
+        <label class="rotulo">Turno:</label>
+        <div class="bloco-inline">
+            <input type="radio" id="manha" name="turno" value="manhã" />
+            <label for="manha" class="rotulo-inline" style="width:auto; font-weight:400;">Manhã</label>
         </div>
-      </fieldset>
+        <div class="bloco-inline">
+            <input type="radio" id="tarde" name="turno" value="tarde" />
+            <label for="tarde" class="rotulo-inline" style="width:auto; font-weight:400;">Tarde</label>
+        </div>
+    </div>
+    <div class="linha-formulario">
+        <label class="rotulo">Atividades Extracurriculares:</label>
+        <div class="bloco-inline" style="vertical-align: top;">
+            <div>
+                <input type="checkbox" id="informatica" name="atividades" value="informatica" />
+                <label for="informatica" class="rotulo-inline" style="width:auto; font-weight:400;">Informática</label>
+            </div>
+            <div>
+                <input type="checkbox" id="musica" name="atividades" value="musica" />
+                <label for="musica" class="rotulo-inline" style="width:auto; font-weight:400;">Música</label>
+            </div>
+            <div>
+                <input type="checkbox" id="balet" name="atividades" value="balet" />
+                <label for="balet" class="rotulo-inline" style="width:auto; font-weight:400;">Balet</label>
+            </div>
+            <div>
+                <input type="checkbox" id="pintura" name="atividades" value="pintura" />
+                <label for="pintura" class="rotulo-inline" style="width:auto; font-weight:400;">Pintura</label>
+            </div>
+            <div>
+                <input type="checkbox" id="judo" name="atividades" value="judo" />
+                <label for="judo" class="rotulo-inline" style="width:auto; font-weight:400;">Judô</label>
+            </div>
+            <div>
+                <input type="checkbox" id="futebol" name="atividades" value="futebol" />
+                <label for="futebol" class="rotulo-inline" style="width:auto; font-weight:400;">Futebol</label>
+            </div>
+        </div>
+    </div>
+</fieldset>
 
-      <div class="flex justify-center space-x-4">
-        <button
-          type="submit"
-          class="border border-black rounded px-3 py-1 text-sm bg-white hover:bg-gray-100"
-        >
-          Envia Formulário
-        </button>
-        <button
-          type="reset"
-          class="border border-black rounded px-3 py-1 text-sm bg-white hover:bg-gray-100"
-        >
-          Limpa Campos
-        </button>
-      </div>
+<div class="flex justify-center espaco-x-4">
+    <button type="submit" class="botao" aria-label="Enviar formulário">Envia Formulário</button>
+    <button type="reset" class="botao" aria-label="Limpar campos do formulário">Limpa Campos</button>
+</div>
     </form>
   </div>
 </body>
