@@ -248,5 +248,23 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #3a8d3e;
+}
+
+.iframeYoutubeCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 70%;
+}
+
+.iframeYoutubeCenter iframe {
+    width: 585px;
+    height: 330px;
+    border:#021975 solid 6px;
+    border-radius: 20px;
 }
