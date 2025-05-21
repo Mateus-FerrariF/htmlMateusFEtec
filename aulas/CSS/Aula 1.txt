@@ -1,0 +1,44 @@
+CSS -> linguagem de estilização
+ L--> Descreve como os elementos de HTML devem aparecer
+
+ex:
+body {
+	background-color: blue;
+	font-family: Arial;
+}
+h1 {
+	color: blue;
+	text-align: center;
+}
+
+Sintaxe: Selector (body,h1), Declaration[Property:Value] (text-align:center,color:blue,font-family:arial,background-color:blue)
+
+-----------------------------------------------------------------------------------
+w3school: https://www.w3schools.com/Css/css_selectors.asp
+
+Seletores: 
+tipos: Seletores simples: seleciona baseado no nome, id e classe
+	 Seletores combinatorios: seleciona elementos baseados nas relações deles
+	 Seletores pseudo-classe: 
+	 Seletores pseudo-elemento:
+	 Seletores por Atributo: seleciona elementos baseado no valor atribuido
+
+Ex: Simples:
+	body {
+	}
+
+por classe:
+	.class1 {
+	}
+
+por ID:
+	#ID1 {
+	}
+
+Todos elementos (universal):
+	* {
+	}
+
+Agrupamento de seletores (modifica todos elementos colocados):
+	p, h1, h2, h3 {
+	}

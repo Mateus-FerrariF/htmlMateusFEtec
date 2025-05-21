@@ -81,6 +81,20 @@
                 
                 <label for="data">Data:</label>
                 <input type="date" id="data" name="data" required>
+
+                <h2>Cadastro do PET</h2>
+                <label for="nomePet">Nome do PET:</label>
+                <input type="text" id="nomePet" name="nomePet" required>
+
+                <label for="nascimentoPet">Data de Nascimento do pet:</label>
+                <input type="date" id="nascimentoPet" name="nascimentoPet" required>
+
+                <label for="tipoPet">Animal:</label>
+                <select id="tipoPet" name="tipoPet" required>
+                    <option value="Gato">Gato</option>
+                    <option value="Cachorro">Cachorro</option>
+                    <option value="Pinguim">Pinguim</option>
+                </select>
                 
                 <button type="submit">Agendar</button>
             </form>
@@ -89,21 +103,38 @@
         <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
             <h1>Geolocalização</h1>
             <button onclick="getLocation()" id="localizacao" style="height:60px;width:20%;">Localizar</button>
+            <div id="mapa" style="margin-top:20px; width:90vw; max-width:600px;">
+                <!-- O mapa será inserido aqui -->
+            </div>
         </div>
 
         <script>
             function getLocation() {
               if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
               } else {
-                document.getElementById("location").innerHTML = "Geolocalização não é suportada pelo seu navegador.";
+                document.getElementById("localizacao").innerHTML = "Geolocalização não é suportada pelo seu navegador.";
               }
             }
         
             function showPosition(position) {
+              const lat = position.coords.latitude;
+              const lon = position.coords.longitude;
               document.getElementById("localizacao").innerHTML = 
-                "Latitude: " + position.coords.latitude + 
-                "<br>Longitude: " + position.coords.longitude;
+                "Latitude: " + lat + "<br>Longitude: " + lon;
+              
+              const mapaDiv = document.getElementById("mapa");
+              mapaDiv.innerHTML = `<iframe width="100%" height="350" 
+                src="https://maps.google.com/maps?q=${lat},${lon}&z=15&output=embed" allowfullscreen loading="lazy"></iframe>`;
+            }
+
+            function showError(error) {
+              let msg = "Erro ao obter localização.";
+              if (error.code === 1) msg = "Permissão de localização negada.";
+              else if (error.code === 2) msg = "Localização indisponível.";
+              else if (error.code === 3) msg = "Tempo de solicitação excedido.";
+              document.getElementById("localizacao").innerHTML = msg;
+              document.getElementById("mapa").innerHTML = "";
             }
 
             const svg = `
